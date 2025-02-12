@@ -122,6 +122,10 @@ import datetime
 import argparse
 import re
 
+wbi = WebDriverInstaller(GOOGLE_CHROME)
+print("BROWSERS:", wbi.get_chrome_version(), wbi.get_edge_version(), wbi.get_firefox_version())
+
+exit()
 # -----------------------------------------------------------------------------------------------
 
 PATH_TO_SELF = sys.executable if I_AM_EXECUTABLE else __file__ # importing modules removes the original value of the variable
