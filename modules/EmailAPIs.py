@@ -355,15 +355,8 @@ class IncognitoMailAPI:
     def init(self):
         self.driver.get("https://incognitomail.co/")
         self.window_handle = self.driver.current_window_handle
-        for _ in range(15):
-            try:
-                email = self.driver.execute_script(f"{DEFINE_GET_EBAV_FUNCTION}\nreturn {GET_EBAV}('button', 'aria-label', 'Email dropdown').textContent")
-                if email.count('@') == 1:
-                    self.email = email
-                    break
-            except:
-                pass
-            time.sleep(DEFAULT_DELAY)
+        untilConditionExecute(self.driver, f"return {GET_EBAV}('button', 'aria-label', 'Email dropdown').textContent != 'Creating...'")
+        self.email = self.driver.execute_script(f"return {GET_EBAV}('button', 'aria-label', 'Email dropdown').textContent")
 
     def parse_inbox(self):
         self.driver.switch_to.window(self.window_handle)
@@ -373,7 +366,7 @@ class IncognitoMailAPI:
                 inbox_headers = self.driver.execute_script(PARSE_INCOGNITOMAIL_INBOX)
                 if inbox_headers != [] and inbox_headers is not None:
                     return inbox_headers
-            except:
+            except Exception as E:
                 pass
             time.sleep(DEFAULT_DELAY)
         return []
