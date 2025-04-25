@@ -10,7 +10,7 @@
   [![Opened issues](https://img.shields.io/github/issues/rzc0d3r/ESET-KeyGen?color=darkred)](https://github.com/rzc0d3r/ESET-KeyGen/issues?cacheSeconds=0)
   [![Closed issues](https://img.shields.io/github/issues-closed/rzc0d3r/ESET-KeyGen?color=darkgreen&cacheSeconds=0)](https://github.com/rzc0d3r/ESET-KeyGen/issues?q=is%3Aissue+is%3Aclosed)
   ![License](https://img.shields.io/github/license/rzc0d3r/ESET-KeyGen)
-  ![Last test](https://colab.research.google.com/drive/1rOoCj93fEvggtBBTE8J174cI03SN99KH_test-24.04.2025_15:23_UTC+3-blue)
+  ![wwwww](https://colab.research.google.com/drive/1rOoCj93fEvggtBBTE8J174cI03SN99KH)
 
 # ESET-KeyGen
 ESET-KeyGen - Trial-Key & Account generator for ESET Products 
